@@ -1,0 +1,102 @@
+%%
+%  ******************************************************************************
+%  * @file    Szablon_raportu_AM_Latex.tex
+%  * @author  Adrian Wójcik   adrian.wojcik@put.poznan.pl
+%  *          
+%  * @version 2.00
+%  * @date    09 Mar 2021
+%  * @brief   Szablon raportu laboratoryjnego 
+%  *          Aplikacje mobilne i wbudowane dla Internetu Rzeczy
+%  *
+%  ******************************************************************************
+%%  
+\documentclass[11pt, a4paper]{article}
+
+\usepackage[pl]{Szablon_raportu_AM_Latex} % [pl] or [en]
+
+%%% Laboratory info %%%
+\university{Politechnika Poznańska}
+\faculty{Wydział Automatyki, Robotyki i Elektrotechniki}
+\institute{Instytut Robotyki i Inteligencji Maszynowej}
+\department{Zakład Sterowania i Elektroniki Przemysłowej}
+\lab{Aplikacje mobilne i wbudowane dla Internetu Rzeczy}
+\instructor{mgr inż. Adrian Wójcik}
+\instructoremail{Adrian.Wojcik@put.poznan.pl}
+\comment{Raport laboratoryjny}
+
+%%% Report info %%%%
+
+% Laboratory exercise:
+\maintitle{Zadanie zaliczeniowe - serwer IoT }
+
+% #1 author info
+\firstauthor{Szymon Kwasiborski 140270, Miłosz Plutowski 140299}
+\firstauthoremail{szymon.kwasiborski@put.poznan.pl, miłosz.plutowski@put.poznan.pl }
+
+% #2 author info (leave blank if only one author)
+\secondauthor{Jakub Gątarski 140241, Filip Kałużny 140 252}
+\secondauthoremail{jakub.gatarski@put.poznan.pl, filip.kaluzny@put.poznan.pl}
+
+% Report submittion 
+\date{01-07-2021} 
+
+\addbibresource{Szablon_raportu_AM_Latex.bib}
+
+%%
+%%
+
+\begin{document}
+
+%% First page %%
+\mainpage
+\newpage
+
+%% Table of contents
+\tableofcontents
+\thispagestyle{fancy}
+\newpage
+
+\section*{Wstęp} \addcontentsline{toc}{section}{Wstęp}
+Raport wykonanego projektu wykonano w oparciu o szablon pobrany z platformy uczelnianej eKursy \cite{ekursy}. Do jego wykonania posłużyliśmy się wiedzą nabytą podczas kursu: Aplikacje mobilne i wbudowane dla Internetu Rzeczy - laboratorium. \\
+Poniższe sprawozdanie podzielono na cztery główne sekcje, podobne do tych używanych podczas wykonywania sprawozdań z poszczególnych instrukcji laboratoryjnych, w trakcie roku akademickiego.
+
+\section{Opis specyfikacji}
+Na samym wstępie opiszemy jakie wymogi (rzecz jasna poza \textbf{podstawowymi}) chcemy zrealizować w naszym projekcie. W późniejszych sekcjach raportu dotyczących opisu implementacji poszczególnych aplikacji, zaznaczymy czy zamierzona funkcjonalność (dany wymóg) została spełniona.
+\begin{enumerate}
+\item Stworzony system wykorzystywać będzie architekturę REST
+\item Wszystkie trzy środowiska zachowają analogiczną architekturę oraz nazewnictwo metod
+\item Kod źródłowy będzie zawierał komentarze według wspólnego standardu
+\item Po uruchomieniu serwera odbędzie się automatyczne uruchomienie skryptów serwera
+\item Każda z aplikacji umożliwiać będzie próbkowanie danych z okresem maksymalnie 100ms
+\item Aplikacje serwera pozwalać będą na podgląd wszystkich wielkości fizycznych odczytanych z czujników
+\item Podczas realizacji, implementacji wykorzystamy system kontroli wersji - GitHub
+\item Aplikacja mobilna wykorzysta wzorzec architektoniczny zapewniający separację interfejsu użytkownika od logiki aplikacji
+\item Aplikacja desktopowa wykorzysta wzorzec architektoniczny zapewniający separację interfejsu użytkownika od logiki aplikacji
+\item Wszystkie stworzone aplikacji posiadać będą jednolitą szatę graficzną
+\end{enumerate}
+
+
+\newpage
+
+\section{Implementacja systemu}
+
+\subsection{Aplikacje serwera}
+
+\subsection{Mobilna aplikacja klienta}
+
+\subsection{Webowa aplikacja klienta}
+
+\subsection{Desktopowa aplikacja klienta}
+\newpage
+\section{Wyniki testów i integracji systemu}
+
+\newpage
+
+\section{Wnioski i podsumowanie}
+
+
+\newpage
+
+\printbibliography[heading=bibintoc]
+
+\end{document}
