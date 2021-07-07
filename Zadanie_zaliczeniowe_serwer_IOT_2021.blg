@@ -1,0 +1,68 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Zadanie_zaliczeniowe_serwer_IOT_2021.aux
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+The style file: biblatex.bst
+Reallocating 'name_of_file' (item size: 1) to 41 items.
+Reallocating 'name_of_file' (item size: 1) to 25 items.
+Reallocating 'glb_str_end' (item size: 4) to 20 items.
+Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
+Reallocating 'global_strs' (item size: 1) to 4000000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Database file #1: Zadanie_zaliczeniowe_serwer_IOT_2021-blx.bib
+Database file #2: Szablon_raportu_AM_Latex.bib
+Biblatex version: 3.16
+Reallocating 'wiz_functions' (item size: 4) to 9000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+You've used 2 entries,
+            6393 wiz_defined-function locations,
+            1205 strings with 9124 characters,
+and the built_in function-call counts, 3056 in all, are:
+= -- 108
+> -- 92
+< -- 10
++ -- 72
+- -- 50
+* -- 76
+:= -- 418
+add.period$ -- 0
+call.type$ -- 2
+change.case$ -- 2
+chr.to.int$ -- 46
+cite$ -- 2
+duplicate$ -- 214
+empty$ -- 349
+format.name$ -- 0
+if$ -- 663
+int.to.chr$ -- 0
+int.to.str$ -- 1
+missing$ -- 0
+newline$ -- 29
+num.names$ -- 0
+pop$ -- 367
+preamble$ -- 1
+purify$ -- 2
+quote$ -- 0
+skip$ -- 143
+stack$ -- 0
+substring$ -- 167
+swap$ -- 60
+text.length$ -- 29
+text.prefix$ -- 0
+top$ -- 1
+type$ -- 56
+warning$ -- 0
+while$ -- 68
+width$ -- 0
+write$ -- 28

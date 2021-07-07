@@ -1,0 +1,449 @@
+%%
+%  ******************************************************************************
+%  * @file    Report_template_AM_Latex.sty
+%  * @author  Adrian Wójcik   adrian.wojcik@put.poznan.pl
+%  *          
+%  * @version 2.00
+%  * @date    09 Mar 2021
+%  * @brief   Mobile and embedded apps for IoT laboratory report template style
+%  *
+%  ******************************************************************************
+%% 
+
+%% Language options %%
+\newif\if@pl \global\@pltrue
+\newif\if@en \global\@enfalse
+\DeclareOption{pl}{\@pltrue \@enfalse}
+\DeclareOption{en}{\@entrue \@plfalse}
+\ProcessOptions
+
+%% Packages %%
+\RequirePackage[T1]{fontenc}
+\RequirePackage{t1enc}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{amssymb}
+\RequirePackage[sc]{titlesec}
+\RequirePackage{caption}
+\RequirePackage{subcaption}
+\RequirePackage{fancyhdr}
+\RequirePackage{enumitem}
+\RequirePackage{lastpage}
+\RequirePackage{graphicx}
+\RequirePackage{hyperref}
+\RequirePackage{tabularx}
+\RequirePackage{multirow}
+\RequirePackage{multicol}
+\RequirePackage{csquotes}
+\RequirePackage{float}
+\RequirePackage{listings}
+\RequirePackage{geometry}
+\RequirePackage{xcolor}
+\RequirePackage{amsmath}
+\RequirePackage{tocloft}
+\RequirePackage[all]{nowidow}
+%% Bibliography style
+\RequirePackage[style=iso-numeric,backend=bibtex]{biblatex} 
+
+% Language dependent packages  
+\if@pl
+	\RequirePackage{polski}
+	\RequirePackage[polish]{babel}
+	\DefineBibliographyStrings{polish}{%
+  		online = {online}, urlseen = {udostępniono},
+	}
+\else
+	\if@en
+	\RequirePackage[english]{babel}
+	\fi
+\fi
+
+%% Section options %%
+\titleformat{\section}{\LARGE\scshape}{}{0pt}{}
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\arabic{subsubsection}}
+
+%% Itemize options %%
+\setitemize{itemsep=0pt}
+\setlength\parindent{0pt}
+\renewcommand\labelitemi{\tiny$\blacksquare$}
+
+%% Hyperlinks options %%
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    citecolor=blue,
+}
+
+% Common graphics path
+\graphicspath{ {./fig/} }
+
+%% Tabels options  %%
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+%% Table of content options %% 
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+%% Geometry options %%
+\geometry{
+	a4paper,
+ 	left  		=19.0mm,
+ 	right 		=19.0mm,
+ 	top   		=25.4mm,
+ 	bottom    	=25.4mm,
+	headheight	=12.5mm
+}
+
+%% Custom commands %%
+
+% Table 'bullet point' item command
+\newcommand{\tabitem}{\indent\textbullet\enspace}
+
+% Include graphics default centefing
+\newcommand{\includecgraphics}[2][]{\centering \includegraphics[#1]{#2}}
+
+%% Definitions %%
+\def\university#1{\gdef\@university{#1}}
+\def\faculty#1{\gdef\@faculty{#1}}
+\def\institute#1{\gdef\@institute{#1}}
+\def\department#1{\gdef\@department{#1}}
+\def\lab#1{\gdef\@lab{#1}}
+\def\firstauthor#1{\gdef\@firstauthor{#1}}
+\def\firstauthoremail#1{\gdef\@firstauthoremail{#1}}
+\def\secondauthor#1{\gdef\@secondauthor{#1}}
+\def\secondauthoremail#1{\gdef\@secondauthoremail{#1}}
+\def\maintitle#1{\gdef\@maintitle{#1}}
+\def\comment#1{\gdef\@comment{#1}}
+\def\instructor#1{\gdef\@instructor{#1}}
+\def\instructoremail#1{\gdef\@instructoremail{#1}}
+\def\date#1{\gdef\@date{#1}}
+
+%% Labels selection  %%
+% PL:
+\if@pl
+    % Figures
+	\captionsetup[figure]{textfont=it, labelfont=it,labelformat=default,labelsep=period,name={Rys.}}
+	% Tables
+	\captionsetup[table]{textfont=it, labelfont=it,labelformat=default,labelsep=period,name={Tab.}}
+	% Listings
+	\captionsetup[lstlisting]{textfont=it,margin=0pt,labelsep=period,labelfont=it}
+\else
+% ENG:
+\if@en
+ 	% Figures
+	\captionsetup[figure]{textfont=it, labelfont=it,labelformat=default,labelsep=period,name={Fig.}}
+	% Tables
+	\captionsetup[table]{textfont=it, labelfont=it,labelformat=default,labelsep=period,name={Tab.}}
+	% Listings
+	\captionsetup[lstlisting]{textfont=it,margin=0pt,labelsep=period,labelfont=it}
+\fi
+\fi
+
+%% First page page %%
+\newcommand{\mainpage}{
+	\thispagestyle{firstpage} 
+	\begin{center}
+	% University name
+	\Huge\textsc{\@university}
+	\vspace{15pt}
+	\par 
+	% Faculty name
+	\LARGE\textsc{\@faculty}
+	\vspace{15pt}
+	\par 
+	% Institute name
+	\textsc{\@institute}
+	\vspace{15pt}
+	\par 
+	% Department name
+	\textsc{\@department}
+	\vspace{15pt}
+	\par 
+	% University logo
+	\includegraphics[width=6cm]{pplogo}
+	\vspace{10pt}
+	\par 
+	% Main instruction title
+	\huge\textsc{\@maintitle}
+	\vspace{15pt}
+	\par 
+	% Laboratory name
+	\textsc{\@lab}
+	\vspace{15pt}
+	\par 
+	% Additional comment
+	\Large\textsc{\@comment}
+	\vspace{15pt}
+	\par
+	% First author's name
+	\Large\textsc{\@firstauthor}
+	\vspace{5pt}
+	\par 
+	% First author's email
+	\normalsize\textsc{\@firstauthoremail}
+	\vspace{15pt}
+	\par
+	% Second author's name
+	\Large\textsc{\@secondauthor}
+	\vspace{5pt}
+	\par 
+	% Second author's email
+	\normalsize\textsc{\@secondauthoremail}
+	\vspace{15pt}
+	\par
+	
+	\end{center}
+	\setlength\parindent{8.54cm}
+	\par 
+	% Instructor info:
+\if@pl
+	\Large\textsc{Prowadzący:}
+\else
+	\if@en
+    \Large\textsc{Instructor:}
+	\fi
+\fi
+	\vspace{5pt}
+	\par 
+	% Instructor's name
+	\Large\textsc{\@instructor}
+	\vspace{5pt}
+	\par 
+	% Instructor's email
+	\normalsize\textsc{\@instructoremail}
+	\setlength\parindent{0cm}
+	\vspace{10pt}
+	\par 
+	
+	\begin{center}
+	% Date
+	\Large\textsc{\@date}
+	\end{center}	
+	\normalsize
+}
+
+\fancypagestyle{firstpage}{%
+  \fancyhead[L,C,R]{}
+  \renewcommand{\headrulewidth}{0.0pt}
+}
+
+\pagestyle{fancy}
+
+%% Header & footer %%
+\fancyhead[L]{
+    %% University logo
+	\begin{tabular}{ @{\,} l @{\,} }{ \includegraphics[width=1.4cm]{fig/pplogo} }
+	\end{tabular}
+	%% University / department / laboratory name
+	\begin{tabular}{  @{\,} l @{\,} }
+		\fontsize{10}{12}\textbf{\@lab}\\
+		\fontsize{10}{12}\@university, \@institute, \\
+		\fontsize{10}{12}\@department
+	\end{tabular}
+}
+\fancyhead[C]{}
+\fancyhead[R]{\thepage /\pageref{LastPage}}
+\fancyfoot{}
+
+%% Listing options %%
+
+% lstlinebgrd fix
+\makeatletter
+\let\old@lstKV@SwitchCases\lstKV@SwitchCases
+\def\lstKV@SwitchCases#1#2#3{}
+\makeatother
+
+\RequirePackage{lstlinebgrd}
+
+\makeatletter
+\let\lstKV@SwitchCases\old@lstKV@SwitchCases
+\lst@Key{numbers}{none}{%
+    \def\lst@PlaceNumber{\lst@linebgrd}%
+    \lstKV@SwitchCases{#1}%
+    {none:\\%
+     left:\def\lst@PlaceNumber{\llap{\normalfont
+                \lst@numberstyle{\thelstnumber}\kern\lst@numbersep}\lst@linebgrd}\\%
+     right:\def\lst@PlaceNumber{\rlap{\normalfont
+                \kern\linewidth \kern\lst@numbersep
+                \lst@numberstyle{\thelstnumber}}\lst@linebgrd}%
+    }{\PackageError{Listings}{Numbers #1 unknown}\@ehc}}
+\makeatother
+
+% Colors
+\colorlet{backgrounddark}{lightgray!10!white}
+\colorlet{backgroundlight}{white}
+
+\definecolor{codegreen}{rgb}{0.00,0.60,0.00}
+\definecolor{preprocesorbrown}{rgb}{0.50,0.25,0.23} 
+\definecolor{codelightblue}{rgb}{0.30,0.70,0.60}
+
+% Common style
+% can be overwritten in specific style
+\lstset{
+    basicstyle = \ttfamily\footnotesize,
+    numbers=left,
+    numberstyle=\numberstyle,
+    linebackgroundcolor=\linebgstyle,
+    frame=l,
+    breaklines=true,
+    % code indentation
+    framexleftmargin=0.5em,
+    linebackgroundsep=0.5em,
+    linebackgroundwidth=\dimexpr\linewidth+0.5em\relax,
+    % separation rule
+    framesep=2pt,
+    fillcolor=\color{green!80!black},
+    % numbers background
+    framerule=2.0em,
+    numbersep=\dimexpr 0.75em+2pt\relax,
+    rulecolor=\color{lightgray!50!white},
+    % don't put numbers into margin
+    xleftmargin=\dimexpr 2.0em+2pt+0.5em\relax,
+}
+
+% 
+\newcommand\linebgstyle{%
+    \ifodd\value{lstnumber}%
+        \color{backgrounddark}%
+    \else
+        \color{backgroundlight}%
+    \fi
+}
+\newcommand\numberstyle[1]{%
+    \ttfamily\scriptsize
+    \color{gray!60!black}%
+    \ifnum#1<10 0\else\fi
+    #1.%
+}
+
+% Custom C language listing style
+\lstdefinestyle{lstC} 
+{
+	language = C,
+	keywordstyle     =\color{blue}\ttfamily,
+  	commentstyle     =\color{codegreen}\ttfamily,
+  	stringstyle      =\color{red},
+  	emphstyle        =\color{codelightblue}\ttfamily,
+  	directivestyle   =\color{preprocesorbrown}\ttfamily,  
+  	emph             ={_Bool}            
+}
+
+% Custom C++ language listing style
+\lstdefinestyle{lstCpp} 
+{
+	language = C++,
+	keywordstyle     =\color{blue}\ttfamily,
+  	commentstyle     =\color{codegreen}\ttfamily,
+  	stringstyle      =\color{red},
+  	emphstyle        =\color{blue}\ttfamily,
+  	directivestyle   =\color{preprocesorbrown}\ttfamily,
+}
+
+% Custom C# language listing style
+\lstdefinestyle{lstCsharp} 
+{
+	language = C++, % No C# support
+	keywordstyle     =\color{blue}\ttfamily,
+  	commentstyle     =\color{codegreen}\ttfamily,
+  	stringstyle      =\color{red},
+  	emphstyle        =\color{codelightblue}\ttfamily,
+  	directivestyle   =\color{preprocesorbrown}\ttfamily,
+  	morekeywords     ={var,async,await,using,byte,string,get,set},			
+  	emph             ={Descendants,First,FormUrlEncodedContent,HttpClient,
+  					   HttpWebRequest,HttpWebResponse,JObject,JProperty,
+  					   KeyValuePair,Length,List,OfType,
+  					   PropertyChangedEventHandler,Stream,StreamReader,
+  					   Value,WebRequest,Where}
+}
+
+% Custom PHP language listing style
+\lstdefinestyle{lstPHP} 
+{
+	language = PHP,
+	keywordstyle     =\color{blue}\ttfamily,
+  	commentstyle     =\color{codegreen}\ttfamily,
+  	stringstyle      =\color{red},
+  	emphstyle        =\color{blue}\ttfamily,
+}
+
+% Custom HTML language listing style
+\lstdefinestyle{lstHTML} 
+{
+	language = HTML,
+	keywordstyle     =\color{blue}\ttfamily,
+  	commentstyle     =\color{codegreen}\ttfamily,
+  	stringstyle      =\color{black},
+  	emphstyle        =\color{blue}\ttfamily,
+  	comment          =[s]{<!--}{-->}
+}
+
+% Custom bash shell listing style
+\lstdefinestyle{lstbash} 
+{
+	language = bash,
+	keywordstyle     =\color{blue}\ttfamily,
+  	commentstyle     =\color{codegreen}\ttfamily,
+  	stringstyle      =\color{red},
+  	emphstyle        =\color{blue}\ttfamily,
+}
+
+% Custom Python language listing style
+\lstdefinestyle{lstPython} 
+{
+	language = Python,
+	keywordstyle     =\color{blue}\ttfamily,
+  	commentstyle     =\color{codegreen}\ttfamily,
+  	stringstyle      =\color{red},
+  	emphstyle        =\color{blue}\ttfamily,
+  	morekeywords     ={as},
+}
+
+% Custom MATLAB language listing style
+\lstdefinestyle{lstMAtlab} 
+{
+	language = Matlab,
+	keywordstyle     =\color{blue}\ttfamily,
+  	commentstyle     =\color{codegreen}\ttfamily,
+  	stringstyle      =\color{red},
+  	emphstyle        =\color{blue}\ttfamily,
+  	comment          =[l]{\%},
+}
+
+% Custom Java language listing style
+\lstdefinestyle{lstJava} 
+{
+	language=Java,
+	keywordstyle     =\color{blue}\ttfamily,
+  	commentstyle     =\color{codegreen}\ttfamily,
+  	stringstyle      =\color{red},
+  	emphstyle        =\color{blue}\ttfamily,
+  	literate         ={-->}{$\rightarrow{}$}{1},
+}
+
+% JavaScript language definition
+\lstdefinelanguage{JavaScript}{%
+	keywords	={async,await,break,case,catch,catch,class,const,
+				  do,else,export,false,for,function,if,import,in,	
+				  instanceof,let,new,null,return,switch,this,throw,	
+				  true,typeof,undefined,var,while},
+  	sensitive	=false,
+  	comment		=[l]{//},
+  	morecomment	=[s]{/*}{*/},
+  	morestring	=[b]',
+  	morestring	=[b]`,
+ 	morestring	=[b]"
+}
+% Custom JavaScript language listing style
+\lstdefinestyle{lstJavaScript} 
+{
+	language = JavaScript,
+	keywordstyle     =\color{blue}\ttfamily,
+  	commentstyle     =\color{codegreen}\ttfamily,
+  	stringstyle      =\color{red},
+  	emphstyle        =\color{preprocesorbrown}\ttfamily,
+  	emph             ={window,document,constructor},
+}
+
