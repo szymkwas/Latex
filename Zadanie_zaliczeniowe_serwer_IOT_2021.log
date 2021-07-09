@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.3.11)  7 JUL 2021 21:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.3.11)  9 JUL 2021 17:10
 entering extended mode
 **./Zadanie_zaliczeniowe_serwer_IOT_2021.tex
 (Zadanie_zaliczeniowe_serwer_IOT_2021.tex
@@ -848,24 +848,24 @@ Package babel Info: Importing basic data for english
 ))
 \openout1 = `Zadanie_zaliczeniowe_serwer_IOT_2021.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
@@ -873,7 +873,7 @@ Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 48.
+(lastpage)             ! on input line 36.
 
 (C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -892,7 +892,7 @@ Package lastpage Info: Please have a look at the pageslts package at
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
 )
-Package hyperref Info: Link coloring ON on input line 48.
+Package hyperref Info: Link coloring ON on input line 36.
 
 (C:\Program Files\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -905,9 +905,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count448
 )
-LaTeX Info: Redefining \ref on input line 48.
-LaTeX Info: Redefining \pageref on input line 48.
-LaTeX Info: Redefining \nameref on input line 48.
+LaTeX Info: Redefining \ref on input line 36.
+LaTeX Info: Redefining \pageref on input line 36.
+LaTeX Info: Redefining \nameref on input line 36.
 
 (Zadanie_zaliczeniowe_serwer_IOT_2021.out) (Zadanie_zaliczeniowe_serwer_IOT_2021.out)
 \@outlinefile=\write4
@@ -1005,12 +1005,12 @@ Package: blx-case-expl3 2020/12/31 v3.16 expl3 case changing code for biblatex
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'Zadanie_zaliczeniowe_serwer_IOT_2021.bbl' found.
  (Zadanie_zaliczeniowe_serwer_IOT_2021.bbl)
-Package biblatex Info: Reference section=0 on input line 48.
-Package biblatex Info: Reference segment=0 on input line 48.
+Package biblatex Info: Reference section=0 on input line 36.
+Package biblatex Info: Reference segment=0 on input line 36.
 <./fig//pplogo.png, id=42, 422.57875pt x 422.57875pt>
 File: ./fig//pplogo.png Graphic file (type png)
 <use ./fig//pplogo.png>
-Package pdftex.def Info: ./fig//pplogo.png  used on input line 51.
+Package pdftex.def Info: ./fig//pplogo.png  used on input line 39.
 (pdftex.def)             Requested size: 170.71652pt x 170.71788pt.
 
 [1
@@ -1032,7 +1032,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <fig/pplogo.png, id=63, 422.57875pt x 422.57875pt>
 File: fig/pplogo.png Graphic file (type png)
 <use fig/pplogo.png>
-Package pdftex.def Info: fig/pplogo.png  used on input line 57.
+Package pdftex.def Info: fig/pplogo.png  used on input line 45.
 (pdftex.def)             Requested size: 39.83368pt x 39.82944pt.
 
 
@@ -1043,14 +1043,14 @@ Package fancyhdr Warning: \headheight is too small (35.56593pt):
 (fancyhdr)                \addtolength{\topmargin}{-8.34354pt}.
 
 [2 <./fig/pplogo.png>]
-Overfull \hbox (0.70003pt too wide) in paragraph at lines 74--75
+Overfull \hbox (0.70003pt too wide) in paragraph at lines 62--63
 []\T1/cmr/m/n/10.95 Aplikacja de-sk-to-powa wy-ko-rzy-sta wzo-rzec ar-chi-tek-to-niczny za-pew-nia-j¡cy se-pa-ra-cj¦ in-
 ter-fejsu u»yt-
  []
 
 File: fig/pplogo.png Graphic file (type png)
 <use fig/pplogo.png>
-Package pdftex.def Info: fig/pplogo.png  used on input line 79.
+Package pdftex.def Info: fig/pplogo.png  used on input line 67.
 (pdftex.def)             Requested size: 39.83368pt x 39.82944pt.
 
 Package fancyhdr Warning: \headheight is too small (35.56593pt): 
@@ -1060,6 +1060,21 @@ Package fancyhdr Warning: \headheight is too small (35.56593pt):
 (fancyhdr)                \addtolength{\topmargin}{-8.34354pt}.
 
 [3]
+<fig/plikjson.jpg, id=93, 825.0825pt x 21.83156pt>
+File: fig/plikjson.jpg Graphic file (type jpg)
+<use fig/plikjson.jpg>
+Package pdftex.def Info: fig/plikjson.jpg  used on input line 75.
+(pdftex.def)             Requested size: 512.1496pt x 13.5514pt.
+
+Overfull \hbox (22.76218pt too wide) in paragraph at lines 75--76
+ [][] 
+ []
+
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 83.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 83.
+(C:\Program Files\MiKTeX\tex/latex/base\t1cmtt.fd
+File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+) (lst/serwis.txt)
 File: fig/pplogo.png Graphic file (type png)
 <use fig/pplogo.png>
 Package pdftex.def Info: fig/pplogo.png  used on input line 90.
@@ -1072,7 +1087,7 @@ Package fancyhdr Warning: \headheight is too small (35.56593pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-8.34354pt}.
 
-[4]
+[4 <./fig/plikjson.jpg>]
 File: fig/pplogo.png Graphic file (type png)
 <use fig/pplogo.png>
 Package pdftex.def Info: fig/pplogo.png  used on input line 93.
@@ -1106,10 +1121,7 @@ Package biblatex Warning: '\mainlang' is deprecated in favour of
 (biblatex)                but note that the syntax is different.
 (biblatex)                Using the old, problematic definition.
 
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 100.
-(C:\Program Files\MiKTeX\tex/latex/base\t1cmtt.fd
-File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-) 
+
 AED: lastpage setting LastPage
 File: fig/pplogo.png Graphic file (type png)
 <use fig/pplogo.png>
@@ -1136,25 +1148,27 @@ Package logreq Info: Writing requests to 'Zadanie_zaliczeniowe_serwer_IOT_2021.r
 
  ) 
 Here is how much of TeX's memory you used:
- 23362 strings out of 479334
- 387626 string characters out of 2866914
- 955519 words of memory out of 3000000
- 40453 multiletter control sequences out of 15000+200000
- 419319 words of font info for 61 fonts, out of 3000000 for 9000
+ 23733 strings out of 479334
+ 391092 string characters out of 2866914
+ 958656 words of memory out of 3000000
+ 40811 multiletter control sequences out of 15000+200000
+ 420710 words of font info for 64 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 86i,21n,88p,1853b,4636s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 86i,21n,88p,1853b,4635s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Szymek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\Szymek\AppData\Local\
-MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\Szymek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
-/dpi600\eccc1200.pk> <C:\Users\Szymek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\Szy
-mek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Szymek\AppData\Local\MiKTeX\fonts/pk/
-ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\Szymek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000
-.pk> <C:\Users\Szymek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1095.pk> <C:\Users\Szymek\AppData\Loca
-l\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1440.pk> <C:\Users\Szymek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/
-ec/dpi600\eccc2074.pk> <C:\Users\Szymek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1728.pk> <C:\Users\S
-zymek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc2488.pk>
-Output written on Zadanie_zaliczeniowe_serwer_IOT_2021.pdf (7 pages, 182053 bytes).
+MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0900.pk> <C:\Users\Szymek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
+/dpi600\ectt0800.pk> <C:\Users\Szymek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\Szy
+mek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1200.pk> <C:\Users\Szymek\AppData\Local\MiKTeX\fonts/pk/
+ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\Szymek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440
+.pk> <C:\Users\Szymek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\Szymek\AppData\Loca
+l\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\Szymek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/
+ec/dpi600\eccc1095.pk> <C:\Users\Szymek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1440.pk> <C:\Users\S
+zymek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc2074.pk> <C:\Users\Szymek\AppData\Local\MiKTeX\fonts/p
+k/ljfour/jknappen/ec/dpi600\eccc1728.pk> <C:\Users\Szymek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc24
+88.pk>
+Output written on Zadanie_zaliczeniowe_serwer_IOT_2021.pdf (7 pages, 213695 bytes).
 PDF statistics:
- 498 PDF objects out of 1000 (max. 8388607)
- 27 named destinations out of 1000 (max. 500000)
- 91 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 555 PDF objects out of 1000 (max. 8388607)
+ 30 named destinations out of 1000 (max. 500000)
+ 96 words of extra memory for PDF output out of 10000 (max. 10000000)
 

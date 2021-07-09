@@ -69,6 +69,18 @@ Na samym wstępie opiszemy jakie wymogi (rzecz jasna poza \textbf{podstawowymi})
 \section{Implementacja systemu}
 
 \subsection{Aplikacje serwera}
+Nasz projekt wykonaliśmy na fizycznym urządzeniu Raspberry Pi z dołączoną nakładką SenseHat. Nasz serwer składa się z nieskończonej pętli (\textit{plik serverAPP\_INF.py}), w której przeprowadzany jest odczyt ze wszystkich czujników dostępnych dzięki nakładce SenseHat, a następnie zapis odczytanych danych do plików (przykładowe dane zapisane do pliku ukazuje rysunek \ref{fig:fig1}). W pętli obsługiwany jest także joystick. Na serwerze umieszczono także skrypty w językach python oraz php odpowiedzialne za wyświetlacz LED oraz zliczanie kliknięć joysticka. 
+
+\begin{figure}[H]
+	\includecgraphics[width=18cm]{fig/plikjson.jpg}
+	\caption{Plik zawierający dane odczytane z akcelerometru}
+	\label{fig:fig1}
+\end{figure}
+
+Do uruchomienia naszego serwera posłużyliśmy się serwisem, który startuje po każdym ponownym uruchomieniu Raspberry (możliwe dzięki komendzie \textbf{enable}). Serwis może być także uruchamiany bezpośrednio z terminala za pomocą komendy (listing \ref{lst:lst1}):
+\lstinputlisting[label={lst:lst1}, style=lstJavaScript,
+caption={Instrukcja uruchamiająca serwis}]
+{lst/serwis.txt}
 
 \subsection{Mobilna aplikacja klienta}
 
