@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.3.11)  9 JUL 2021 18:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.3.11)  9 JUL 2021 19:15
 entering extended mode
 **./Zadanie_zaliczeniowe_serwer_IOT_2021.tex
 (Zadanie_zaliczeniowe_serwer_IOT_2021.tex
@@ -1110,11 +1110,20 @@ Package fancyhdr Warning: \headheight is too small (35.56593pt):
 (fancyhdr)                \addtolength{\topmargin}{-8.34354pt}.
 
 [5 <./fig/home_mob.jpg>]
+<fig/home_web.jpg, id=134, 124.96687pt x 276.28218pt>
+File: fig/home_web.jpg Graphic file (type jpg)
+<use fig/home_web.jpg>
+Package pdftex.def Info: fig/home_web.jpg  used on input line 122.
+(pdftex.def)             Requested size: 128.04991pt x 241.84747pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 120--125
+
+ []
+
 File: fig/pplogo.png Graphic file (type png)
 <use fig/pplogo.png>
-Package pdftex.def Info: fig/pplogo.png  used on input line 122.
+Package pdftex.def Info: fig/pplogo.png  used on input line 132.
 (pdftex.def)             Requested size: 39.83368pt x 39.82944pt.
-
 
 Package fancyhdr Warning: \headheight is too small (35.56593pt): 
 (fancyhdr)                Make it at least 43.90947pt, for example:
@@ -1122,12 +1131,21 @@ Package fancyhdr Warning: \headheight is too small (35.56593pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-8.34354pt}.
 
-[6]
+[6 <./fig/home_web.jpg>]
+<fig/home_des.jpg, id=142, 127.97812pt x 258.21469pt>
+File: fig/home_des.jpg Graphic file (type jpg)
+<use fig/home_des.jpg>
+Package pdftex.def Info: fig/home_des.jpg  used on input line 135.
+(pdftex.def)             Requested size: 128.04614pt x 241.85503pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--138
+
+ []
+
 File: fig/pplogo.png Graphic file (type png)
 <use fig/pplogo.png>
-Package pdftex.def Info: fig/pplogo.png  used on input line 125.
+Package pdftex.def Info: fig/pplogo.png  used on input line 149.
 (pdftex.def)             Requested size: 39.83368pt x 39.82944pt.
-
 
 Package fancyhdr Warning: \headheight is too small (35.56593pt): 
 (fancyhdr)                Make it at least 43.90947pt, for example:
@@ -1135,10 +1153,10 @@ Package fancyhdr Warning: \headheight is too small (35.56593pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-8.34354pt}.
 
-[7]
+[7 <./fig/home_des.jpg>]
 File: fig/pplogo.png Graphic file (type png)
 <use fig/pplogo.png>
-Package pdftex.def Info: fig/pplogo.png  used on input line 130.
+Package pdftex.def Info: fig/pplogo.png  used on input line 153.
 (pdftex.def)             Requested size: 39.83368pt x 39.82944pt.
 
 
@@ -1149,6 +1167,19 @@ Package fancyhdr Warning: \headheight is too small (35.56593pt):
 (fancyhdr)                \addtolength{\topmargin}{-8.34354pt}.
 
 [8]
+File: fig/pplogo.png Graphic file (type png)
+<use fig/pplogo.png>
+Package pdftex.def Info: fig/pplogo.png  used on input line 158.
+(pdftex.def)             Requested size: 39.83368pt x 39.82944pt.
+
+
+Package fancyhdr Warning: \headheight is too small (35.56593pt): 
+(fancyhdr)                Make it at least 43.90947pt, for example:
+(fancyhdr)                \setlength{\headheight}{43.90947pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-8.34354pt}.
+
+[9]
 
 Package biblatex Warning: '\mainlang' is deprecated in favour of
 (biblatex)                '\textmainlang'.
@@ -1160,7 +1191,7 @@ Package biblatex Warning: '\mainlang' is deprecated in favour of
 AED: lastpage setting LastPage
 File: fig/pplogo.png Graphic file (type png)
 <use fig/pplogo.png>
-Package pdftex.def Info: fig/pplogo.png  used on input line 134.
+Package pdftex.def Info: fig/pplogo.png  used on input line 162.
 (pdftex.def)             Requested size: 39.83368pt x 39.82944pt.
 
 Package fancyhdr Warning: \headheight is too small (35.56593pt): 
@@ -1169,7 +1200,7 @@ Package fancyhdr Warning: \headheight is too small (35.56593pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-8.34354pt}.
 
-[9] (Zadanie_zaliczeniowe_serwer_IOT_2021.aux)
+[10] (Zadanie_zaliczeniowe_serwer_IOT_2021.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1183,10 +1214,10 @@ Package logreq Info: Writing requests to 'Zadanie_zaliczeniowe_serwer_IOT_2021.r
 
  ) 
 Here is how much of TeX's memory you used:
- 23930 strings out of 479334
- 393395 string characters out of 2866914
- 1189074 words of memory out of 3000000
- 40977 multiletter control sequences out of 15000+200000
+ 23947 strings out of 479334
+ 393676 string characters out of 2866914
+ 1189214 words of memory out of 3000000
+ 40989 multiletter control sequences out of 15000+200000
  422121 words of font info for 68 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  86i,21n,88p,1853b,4635s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1201,9 +1232,9 @@ ec/dpi600\eccc1095.pk> <C:\Users\Szymek\AppData\Local\MiKTeX\fonts/pk/ljfour/jkn
 zymek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc2074.pk> <C:\Users\Szymek\AppData\Local\MiKTeX\fonts/p
 k/ljfour/jknappen/ec/dpi600\eccc1728.pk> <C:\Users\Szymek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc24
 88.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on Zadanie_zaliczeniowe_serwer_IOT_2021.pdf (9 pages, 287983 bytes).
+Output written on Zadanie_zaliczeniowe_serwer_IOT_2021.pdf (10 pages, 321119 bytes).
 PDF statistics:
- 647 PDF objects out of 1000 (max. 8388607)
- 49 named destinations out of 1000 (max. 500000)
- 101 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 661 PDF objects out of 1000 (max. 8388607)
+ 52 named destinations out of 1000 (max. 500000)
+ 111 words of extra memory for PDF output out of 10000 (max. 10000000)
 

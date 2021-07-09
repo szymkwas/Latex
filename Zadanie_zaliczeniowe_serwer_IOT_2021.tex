@@ -117,9 +117,37 @@ Strona odpowiedzialna za konfiguracje zawiera cztery pola, w które użytkownik 
 \end{itemize} 
 
 \subsection{Webowa aplikacja klienta}
+Trzymając się jednolitej szaty graficznej nasza aplikacja internetowa również zawiera menu nawigacyjne (widoczne na rysunku \ref{fig:fig3}) odpowiedzialne za przechodzenie do poszczególnych funkcjonalności. Jest ono natomiast widoczne na każdej ze stron zatem z użytkownik może poruszać się z każdej strony na każdą. Aplikacja zawiera takie same strony jak aplikacja mobilna. \\
+\begin{figure}[H]
+	\includecgraphics[width=4.5cm, height=8.5cm]{fig/home_web.jpg}
+	\caption{Menu nawigacyjne aplikacji webowej}
+	\label{fig:fig3}
+\end{figure}
 
+Strony odpowiedzialne za tworzenie wykresów prezentują się analogicznie jak te w przypadku aplikacji na Androida natomiast, jednak w odróżnieniu do niej użytkownik może zmienić czas próbkowania bezpośrednio na stronie z przebiegami. \\
+Sterowanie diodami LED odbywa się poprzez przyciski typu \textbf{color}, które układają się w wizualizacje matrycy 8x8 z nakładki SenseHat. Po wybraniu diod oraz koloru na jaki mają się zaświecić, żądanie wysyłane jest poprzez kliknięcie przycisku SET LEDs STATE. \\
+Przedstawiona na stronie LIST tabela pobiera dane ze wszystkich czujników i odświeża je tylko i wyłącznie po kliknięciu przycisku REFRESH DATA. Tabela ta od razu zawiera wszystkie pomiary oraz w poszczególnych przypadkach pomiary dla kilku jednostek.
+Strona odpowiedzialna za prezentacje zmiennych joysticka prezentuje się również analogicznie jak ta opisana w przypadku aplikacji mobilnej natomiast w niej również możliwe jest odświeżenie danych poprzez wciśnięcie przycisku REFRESH DATA. \\
+Menu konfiguracyjne wygląda identycznie jak te w aplikacji na smartfony.
 \subsection{Desktopowa aplikacja klienta}
+Aplikacja na komputery również zawiera menu (rysunek \ref{fig:fig4}) widoczne tak jak w przypadku aplikacji internetowej na każdej ze stron. \\
+\begin{figure}[H]
+	\includecgraphics[width=4.5cm, height=8.5cm]{fig/home_des.jpg}
+	\caption{Menu nawigacyjne aplikacji desktopowej}
+	\label{fig:fig4}
+\end{figure}
+W tej aplikacji dodatkową opcją jest możliwość zmiany adresu IP bezpośrednio na stronach przedstawiających wykresy. Widnieją na nich pola umożliwiające wpisanie wspomnianego adresu IP oraz czasu próbkowania a także przycisk UPDATE CONFIG, ustawiający wprowadzone wartości. \\
+Sterowanie matrycą LED odbywa się w taki sam sposób jak w naszej aplikacji mobilnej. Użytkownik ma do dyspozycji trzy suwaki RGB, po których ustawieniu wedle uznania należy wybrać, które z diod mają się zacząć świecić. Na stronie tej mamy także dwa przyciski odpowiedzialne za: 
+\begin{itemize}
+\item wyłączenie wszystkich diod - przycisk CLEAR
+\item wysłanie żądania zapalenia diod - przycisk SEND
+\end{itemize}
+
+Informacje na temat zmiennych joysticka prezentowane są poprzez znany już wykres zmiennych Counter\_X (oś x), Counter\_Y (oś y) oraz Counter\_middle. \\
+Prezentacja danych ze wszystkich czujników przedstawiona na stronie LIST zawiera te same dane co tabela w aplikacji webowej. \\
+Konfiguracja odbywa się analogicznie do aplikacji mobilnej oraz webowej. Cztery pola konfiguracji oraz przycisk UPDATE CONFIG, aktualizujący parametry konfiguracyjne. Natomiast dodatkową możliwością w przypadku aplikacji desktopowej jest możliwość powrotu do ustawień fabrycznych.
 \newpage
+
 \section{Wyniki testów i integracji systemu}
 
 \newpage
