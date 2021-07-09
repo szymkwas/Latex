@@ -53,7 +53,7 @@ Na samym wstępie opiszemy jakie wymogi (rzecz jasna poza \textbf{podstawowymi})
 \begin{enumerate}
 \item Stworzony system wykorzystywać będzie architekturę REST
 \item Wszystkie trzy środowiska zachowają analogiczną architekturę oraz nazewnictwo metod
-\item Kod źródłowy będzie zawierał komentarze według wspólnego standardu
+\item Kod źródłowy będzie zawierał komentarze według wspólnego standardu (doxygen)
 \item Po uruchomieniu serwera odbędzie się automatyczne uruchomienie skryptów serwera
 \item Każda z aplikacji umożliwiać będzie próbkowanie danych z okresem maksymalnie 100ms
 \item Aplikacje serwera pozwalać będą na podgląd wszystkich wielkości fizycznych odczytanych z czujników
@@ -69,7 +69,7 @@ Na samym wstępie opiszemy jakie wymogi (rzecz jasna poza \textbf{podstawowymi})
 \section{Implementacja systemu}
 
 \subsection{Aplikacje serwera}
-Nasz projekt wykonaliśmy na fizycznym urządzeniu Raspberry Pi z dołączoną nakładką SenseHat. Nasz serwer składa się z nieskończonej pętli (\textit{plik serverAPP\_INF.py}), w której przeprowadzany jest odczyt ze wszystkich czujników dostępnych dzięki nakładce SenseHat, a następnie zapis odczytanych danych do plików (przykładowe dane zapisane do pliku ukazuje rysunek \ref{fig:fig1}). W pętli obsługiwany jest także joystick. Na serwerze umieszczono także skrypty w językach python oraz php odpowiedzialne za wyświetlacz LED oraz zliczanie kliknięć joysticka. 
+Nasz projekt wykonaliśmy na fizycznym urządzeniu Raspberry Pi z dołączoną nakładką SenseHat. Nasz serwer składa się z nieskończonej pętli (\textit{plik serverAPP\_INF.py}), w której przeprowadzany jest odczyt (listing \ref{lst:lst1}) ze wszystkich czujników dostępnych dzięki nakładce SenseHat, a następnie zapis odczytanych danych do plików (przykładowe dane zapisane do pliku ukazuje rysunek \ref{fig:fig1}). W pętli obsługiwany jest także joystick. Na serwerze umieszczono także skrypty w językach python oraz php odpowiedzialne za wyświetlacz LED oraz zliczanie kliknięć joysticka. 
 
 \begin{figure}[H]
 	\includecgraphics[width=18cm]{fig/plikjson.jpg}
@@ -77,12 +77,44 @@ Nasz projekt wykonaliśmy na fizycznym urządzeniu Raspberry Pi z dołączoną n
 	\label{fig:fig1}
 \end{figure}
 
-Do uruchomienia naszego serwera posłużyliśmy się serwisem, który startuje po każdym ponownym uruchomieniu Raspberry (możliwe dzięki komendzie \textbf{enable}). Serwis może być także uruchamiany bezpośrednio z terminala za pomocą komendy (listing \ref{lst:lst1}):
-\lstinputlisting[label={lst:lst1}, style=lstJavaScript,
+\lstinputlisting[label={lst:lst1}, style=lstPython,
+caption={Przykładowa instrukcja pobrania oraz zapisania danych z czujnika wilgotości}]
+{lst/odczyt_zapis.py}
+Do uruchomienia naszego serwera posłużyliśmy się serwisem, który startuje po każdym ponownym uruchomieniu Raspberry (możliwe dzięki komendzie \textbf{enable}). Serwis może być także uruchamiany bezpośrednio z terminala za pomocą komendy (listing \ref{lst:lst2}):
+\lstinputlisting[label={lst:lst2}, style=lstJavaScript,
 caption={Instrukcja uruchamiająca serwis}]
 {lst/serwis.txt}
+\newpage
 
 \subsection{Mobilna aplikacja klienta}
+Implementacje naszej aplikacji mobilnej rozpoczęliśmy od stworzenia strony startowej (rysunek \ref{fig:fig2}), dzięki której możliwa będzie nawigacja pomiędzy poszczególnymi funkcjonalnościami. Po kliknięciu w odpowiedni przycisk przenosi on nas na odpowiadającą mu stronę. Każda kolejna strona została wykonana zgodnie z jej przeznaczeniem. Menu jest intuicyjne, a wszystkie z przycisków klarownie opisane.
+
+\begin{figure}[H]
+	\includecgraphics[height=12cm, width=8cm]{fig/home_mob.jpg}
+	\caption{Menu nawigacyjne aplikacji mobilnej}
+	\label{fig:fig2}
+\end{figure}
+
+Przejdźmy teraz do omówienia poszczególnych stron w aplikacji. Pierwsza z nich zawiera tabelę, na której użytkownik ma możliwość wyboru jakie dane chce wyświetlić oraz z jakim czasem próbkowania. Użytkownik może także zmienić wyświetlane jednostki za pomocą suwaka. Na samym dole strony widnieją przyciski:
+\begin{itemize}
+\item START - uruchamia proces pobierania danych i wyświetla je odświeżając co czas próbkowania
+\item STOP - zatrzymuje proces pobierania danych
+\item REFRESH - jednokrotnie pobiera i wyświetla dane w tabeli
+\item CLEAR - czyści tabelę z wszystkich wartości
+\end{itemize} 
+
+Druga z kolei strona prezentuje wykresy położenia (raw, pitch i roll). Tutaj także użytkownik może zadecydować, które z przebiegów chce wyświetlić, po czym klikając START przebiegi będą się wyświetlać prezentując wartości odświeżane co ustawiony okres próbkowania (użytkownik może szybko przenieść się do menu konfiguracyjnego za pośrednictwem przycisku CONFIG gdzie możliwa jest zmiana okresu próbkowania). \\
+Strona trzecia działa analogicznie jak ta opisana powyżej.
+\newpage
+Strona z joystickiem zawiera wykres płaszczyzny x oraz y, które to odpowiadają wartością zmiennych odpowiednio Counter\_X i Counter\_Y. Poniżej widnieje zmienna zliczająca ile razy joystick został wciśnięty. Przyciski na samym dole strony odpowiadają za uruchomienie lub zatrzymanie timera, który umożliwia pobieranie wspomnianych wartości na bieżąco. Znajdziemy tam także przycisk REFRESH, dzięki któremu trzy wartości odpowiadające za bieżący stan joysticka są pobierane i wyświetlane jednokrotnie. \\
+Obsługa matrycy LED została zaimplementowana jako graficzna wizualizacja bieżącego stanu matrycy 8x8 z nakładki SenseHat. Pod nią natomiast znajdują się suwaki ustawiające kolor w postaci RGB. Następnie mając wybrany kolor klikamy na diody jakie chcemy zapalić. Wysłanie tego żądania odbywa się poprzez naciśniecie przycisku SEND. Przycisk CLEAR natomiast wyłącza nam wszystkie diody. \\
+Strona odpowiedzialna za konfiguracje zawiera cztery pola, w które użytkownik ma możliwość ustawienia:
+\begin{itemize}
+\item adresu IP
+\item Czasu próbkowania
+\item Maksymalna liczba próbek
+\item Wersja API
+\end{itemize} 
 
 \subsection{Webowa aplikacja klienta}
 
